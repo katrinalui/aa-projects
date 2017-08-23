@@ -1,0 +1,40 @@
+.sections-nav {
+	background: white;
+	border-bottom: 1px solid $light-gray;
+  justify-content: center;
+}
+
+.sections-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: $sans-serif;
+  font-size: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sections-nav li {
+  margin: 0 5px;
+}
+
+.sections-nav button {
+	background: none;
+	padding: 0px;
+	color: #000;
+	font-weight: normal;
+	border: none;
+  text-transform: capitalize;
+}
+
+.sections-nav button:hover {
+	background-color: $lightest-gray;
+}
+
+.sections-nav a {
+  text-transform: uppercase;
+}
+
+.sections-nav a:hover {
+  text-decoration: underline;
+}
