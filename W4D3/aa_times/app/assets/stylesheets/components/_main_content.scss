@@ -1,0 +1,17 @@
+.blog-list {
+  list-style: initial;
+  padding-left: 15px;
+}
+
+.blog-list li {
+  padding-bottom: 10px;
+}
+
+.comment {
+  font-size: 10px;
+  font-family: $sans-serif;
+}
+
+.comment:hover {
+  color: $blue;
+}
