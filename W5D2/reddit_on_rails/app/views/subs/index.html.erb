@@ -1,0 +1,13 @@
+<h1>Subs</h1>
+
+<section>
+<% @subs.each do |sub| %>
+  <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+  <br>
+<% end %>
+</section>
+
+<section class="buttons">
+  <%= button_to "New Sub", new_sub_url, method: :get %>
+  <%= button_to "New Post", new_post_url, method: :get %>
+</section>

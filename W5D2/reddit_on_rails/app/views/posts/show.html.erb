@@ -1,0 +1,23 @@
+<h1><%= @post.title %> by <%= @post.author.username %></h1>
+
+<section>
+  <%= @post.content %>
+</section>
+
+<section>
+  <% if current_user = @post.author %>
+  <%= button_to "Edit Post", edit_post_url, method: :get %>
+  <% end %>
+</section>
+<section class="post-comments">
+  <h3>Comments</h3>
+  <ul class="top-level-comments">
+  <% @post.comments.where(parent_comment_id: nil).each do |comment| %>
+    <li>
+      <a href="<%= comment_url(comment) %>"><%= comment.content %> by <%= comment.author.username %></a>
+      <%= render 'comments/comment', comment: comment %>
+    </li>
+  <% end %>
+  </ul>
+  <%= button_to "Add Comment", new_post_comment_url(@post), method: :get %>
+</section>
