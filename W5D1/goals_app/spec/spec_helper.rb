@@ -94,3 +94,24 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+def sign_up(username)
+  visit new_user_url
+  fill_in 'username', with: username
+  fill_in 'password', with: 'password'
+  click_button 'Create User'
+end
+
+def sign_up_as_ricksanchez
+  sign_up('ricksanchez')
+end
+
+def add_goal(title = nil, details = nil)
+  title ||= 'Improve Cooking Skills'
+  details ||= 'I would like to not poison people with my cooking.'
+
+  visit new_goal_url
+  fill_in 'title', with: title
+  fill_in 'details', with: details
+  click_button 'Add Goal'
+end

@@ -1,0 +1,12 @@
+<% if @goal.private %>
+  Private
+<% else %>
+  Public
+<% end %>
+
+<%= @goal.title %>
+<br>
+<%= @goal.details %>
+<br>
+Completed: <%= @goal.completed %>
+<%= link_to "Edit Goal", edit_goal_url(@goal) %>

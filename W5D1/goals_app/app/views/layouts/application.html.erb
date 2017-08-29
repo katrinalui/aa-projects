@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoalsApp</title>
+    <title>Goals App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <nav>
+      <% if current_user %>
+        <%= current_user.username %>
+        <%= button_to "Sign Out", session_url, method: :delete %>
+      <% end %>
+    </nav>
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <%= error %>
+      <% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
