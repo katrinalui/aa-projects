@@ -12,6 +12,8 @@
 #
 
 class Post < ApplicationRecord
+  include Votable
+
   validates :author, :title, presence: true
   validates :subs, presence: { message: 'Must select at least one sub' }
 
