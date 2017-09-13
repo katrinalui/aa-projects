@@ -17,7 +17,7 @@ class TodoListItem extends React.Component {
     e.preventDefault();
     const updatedTodo = Object.assign({}, this.props.todo, { done: !this.props.todo.done });
     // this.setState({ done: !this.state.done }, () => this.props.updateTodo({todo: this.state}) );
-    console.log(updatedTodo);
+
     this.props.updateTodo({todo: updatedTodo});
 
     // if (this.state.done) {
