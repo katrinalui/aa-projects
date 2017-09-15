@@ -48,8 +48,6 @@
    align-items: center;
 
    ul {
-     display: flex;
-     justify-content: flex-end;
 
      li {
        a {
@@ -104,10 +102,32 @@
    color: $black;
  }
 
+ .pokedex {
+   display: flex;
+   height: 100%;
+ }
+
+ .pokemon-index {
+   overflow-y: scroll;
+   width: 150px;
+ }
+
  .pokemon-index-item {
    display: flex;
    align-items: flex-start;
    * {
      margin-right: 10px;
    }
+ }
+
+ .pokedisplay {
+   padding-left: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .pokemon-items {
+   align-items: center;
  }

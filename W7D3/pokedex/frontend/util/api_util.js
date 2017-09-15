@@ -11,7 +11,15 @@ const APIUtil = {
       url: `api/pokemon/${pokeId}`,
       method: 'GET'
     })
+  ),
+
+  getItems: (pokeId) => (
+    $.ajax({
+      url: `api/pokemon/${pokeId}/items`,
+      method: 'GET'
+    })
   )
+
 };
 
 

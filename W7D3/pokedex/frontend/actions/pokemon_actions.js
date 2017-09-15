@@ -10,7 +10,7 @@ export const receiveAllPokemon = (pokemon) => {
   };
 };
 
-export const receivePoke = ({ pokemon, items }) => {
+export const receivePoke = ({pokemon, items}) => {
   return {
     type: RECEIVE_POKE,
     pokemon,
